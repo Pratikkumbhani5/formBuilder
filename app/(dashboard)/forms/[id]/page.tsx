@@ -136,7 +136,7 @@ async function SubmissionTable({id} : {id: number}) {
   })
 
   const rows: Row[] = [];
-  form.FormSubmissions.forEach(submission => {
+  form.FormSubmissions.forEach((submission: { content: string; createdAt: any; }) => {
     const content = JSON.parse(submission.content);
     rows.push({
       ...content,
